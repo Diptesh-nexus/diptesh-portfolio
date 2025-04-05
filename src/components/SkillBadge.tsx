@@ -4,11 +4,19 @@ import { motion } from 'framer-motion';
 type SkillBadgeProps = {
   skill: string;
   level?: number; // 1-5 skill level
+  icon?: string; // Optional icon URL
 };
 
-const SkillBadge = ({ skill, level = 0 }: SkillBadgeProps) => {
+const SkillBadge = ({ skill, level = 0, icon }: SkillBadgeProps) => {
   return (
-    <div className="skill-badge group relative">
+    <div className="skill-badge group relative flex items-center">
+      {icon && (
+        <img 
+          src={icon} 
+          alt={`${skill} icon`} 
+          className="w-5 h-5 mr-2 object-contain"
+        />
+      )}
       <span>{skill}</span>
       
       {level > 0 && (

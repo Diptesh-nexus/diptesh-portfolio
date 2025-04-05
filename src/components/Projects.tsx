@@ -28,7 +28,7 @@ const Projects = () => {
       id: 1,
       title: "Composite Structure Switchboards",
       description: "Innovative switchboard enclosures for Schneider Electric with improved aesthetics and IEC 61439 compliance.",
-      image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b",
+      image: "https://images.unsplash.com/photo-1611292294925-ae95da022ab2?q=80&w=1000&auto=format&fit=crop",
       category: "Design",
       details: [
         "Created innovative composite structures for switchboards",
@@ -40,7 +40,7 @@ const Projects = () => {
         {
           title: "Design Challenge",
           description: "Creating a new generation of switchboard enclosures that combine structural integrity with modern aesthetic appeal while maintaining full compliance with IEC 61439 standards.",
-          image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b"
+          image: "https://images.unsplash.com/photo-1581094651181-35942459ef62?q=80&w=1000&auto=format&fit=crop"
         },
         {
           title: "Solution",
@@ -56,7 +56,7 @@ const Projects = () => {
       id: 2,
       title: "Flameproof Equipment Design",
       description: "Explosion-proof junction boxes and control panels for Prateek Explosionproof compliant with industrial safety standards.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      image: "https://images.unsplash.com/photo-1581092787765-e531b7dc4bfe?q=80&w=1000&auto=format&fit=crop",
       category: "Safety",
       details: [
         "Engineered explosion-proof equipment for hazardous environments",
@@ -68,7 +68,7 @@ const Projects = () => {
         {
           title: "Safety Requirements",
           description: "Creating explosion-proof enclosures that prevent internal explosions from igniting the external atmosphere in hazardous industrial environments.",
-          image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+          image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1000&auto=format&fit=crop"
         },
         {
           title: "Technical Approach",
@@ -84,7 +84,7 @@ const Projects = () => {
       id: 3,
       title: "1200kV Transmission Hardware",
       description: "High-voltage transmission components for Mosdorfer India designed using advanced CAD technologies.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      image: "https://images.unsplash.com/photo-1473773508845-188df298d2d1?q=80&w=1000&auto=format&fit=crop",
       category: "Engineering",
       details: [
         "Designed high-voltage transmission components for up to 1200kV",
@@ -96,7 +96,7 @@ const Projects = () => {
         {
           title: "Technical Specifications",
           description: "Developing hardware components for ultra-high voltage transmission lines capable of handling up to 1200kV, requiring precise engineering for electrical and mechanical performance.",
-          image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+          image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1000&auto=format&fit=crop"
         },
         {
           title: "Design Process",
@@ -112,7 +112,7 @@ const Projects = () => {
       id: 4,
       title: "ACB/MCCB Link Work Optimization",
       description: "Redesigned power distribution components for Schneider Electric to improve efficiency and reduce material usage.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1000&auto=format&fit=crop",
       category: "Optimization",
       details: [
         "Optimized link designs for power distribution panels",
@@ -124,7 +124,7 @@ const Projects = () => {
         {
           title: "Optimization Goals",
           description: "Reducing material costs and improving electrical performance of ACB/MCCB link work components while maintaining full compliance with safety standards.",
-          image: "https://images.unsplash.com/photo-1518770660439-4636190af475"
+          image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1000&auto=format&fit=crop"
         },
         {
           title: "Engineering Approach",
@@ -133,6 +133,62 @@ const Projects = () => {
         {
           title: "Outcomes",
           description: "The optimized components achieved 18% material reduction, improved temperature performance by 7°C under full load, and simplified the assembly process, reducing manufacturing time.",
+        }
+      ]
+    },
+    {
+      id: 5,
+      title: "3D Modeling & CAD Design",
+      description: "Advanced 3D models and parametric designs created using Creo Parametric and SolidWorks.",
+      image: "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=1000&auto=format&fit=crop",
+      category: "3D Modeling",
+      details: [
+        "Created complex parametric 3D models for mechanical components",
+        "Developed assembly models with kinematic simulations",
+        "Generated manufacturing drawings with GD&T",
+        "Performed design reviews and optimizations"
+      ],
+      fullDetails: [
+        {
+          title: "Modeling Approach",
+          description: "Using advanced surface modeling techniques to create complex geometries with optimized topology for both aesthetics and structural integrity.",
+          image: "https://images.unsplash.com/photo-1581093806865-63cc37226c59?q=80&w=1000&auto=format&fit=crop"
+        },
+        {
+          title: "Design Methodology",
+          description: "Applied parametric modeling principles to create flexible designs that can be easily modified to accommodate changes in requirements or constraints.",
+        },
+        {
+          title: "Digital Prototyping",
+          description: "Utilized digital prototyping to validate designs before physical production, reducing development time and costs while improving final product quality.",
+        }
+      ]
+    },
+    {
+      id: 6,
+      title: "Ansys Structural Analysis",
+      description: "Finite Element Analysis using Ansys Workbench to validate structural integrity of critical components.",
+      image: "https://images.unsplash.com/photo-1581093588156-4dc23e54da33?q=80&w=1000&auto=format&fit=crop",
+      category: "Analysis",
+      details: [
+        "Performed static structural analysis of mechanical components",
+        "Conducted thermal analysis for temperature distribution",
+        "Analyzed fatigue life of critical parts",
+        "Optimized designs based on simulation results"
+      ],
+      fullDetails: [
+        {
+          title: "Analysis Methodology",
+          description: "Creating accurate finite element models with appropriate mesh refinement in critical regions to ensure simulation results accurately represent real-world behavior.",
+          image: "https://images.unsplash.com/photo-1581093458791-9abe0355c021?q=80&w=1000&auto=format&fit=crop"
+        },
+        {
+          title: "Load Case Development",
+          description: "Developed comprehensive load cases covering normal operation, extreme conditions, and failure scenarios to ensure designs meet all performance and safety requirements.",
+        },
+        {
+          title: "Results Interpretation",
+          description: "Analyzed stress distributions, deformations, and safety factors to identify potential failure modes and areas for design improvement, resulting in more robust and reliable products.",
         }
       ]
     },

@@ -10,6 +10,7 @@ import Education from '@/components/Education';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppChat from '@/components/WhatsAppChat';
+import BackgroundMusic from '@/components/BackgroundMusic';
 
 // We're adding framer-motion for animations
 import { motion } from 'framer-motion';
@@ -53,6 +54,7 @@ const Index = () => {
       <Contact />
       <Footer />
       <WhatsAppChat />
+      <BackgroundMusic />
     </div>
   );
 };
