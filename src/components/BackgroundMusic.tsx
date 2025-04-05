@@ -1,6 +1,6 @@
 
 import { useState, useRef, useEffect } from 'react';
-import { Music, MusicOff } from 'lucide-react';
+import { Music, MicOff } from 'lucide-react';
 
 const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -43,7 +43,7 @@ const BackgroundMusic = () => {
         {isPlaying ? (
           <Music size={20} className="text-neonGreen animate-pulse" />
         ) : (
-          <MusicOff size={20} className="text-softGreen group-hover:text-neonGreen transition-colors" />
+          <MicOff size={20} className="text-softGreen group-hover:text-neonGreen transition-colors" />
         )}
       </button>
       <div className="absolute -top-10 right-0 bg-charcoal/90 backdrop-blur-sm px-3 py-1 rounded text-xs 
