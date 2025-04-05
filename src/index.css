@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +90,50 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-deepBlack text-softGreen m-0 p-0;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-matteBlack;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-darkGreen rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-softGreen;
+  }
+}
+
+@layer components {
+  .green-highlight {
+    @apply text-neonGreen font-bold;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold mb-6 pb-2 relative inline-block;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-1 bg-green-gradient animate-gradient-flow;
+    background-size: 200% 200%;
+  }
+
+  .skill-badge {
+    @apply px-4 py-2 bg-charcoal rounded-md border border-softGreen text-softGreen 
+           transition-all duration-300 hover:bg-darkGreen hover:text-white transform hover:scale-105;
+  }
+
+  .button-green {
+    @apply px-6 py-3 bg-darkGreen text-white rounded-md transition-all duration-300 
+           hover:bg-softGreen hover:text-black transform hover:scale-105 font-medium;
   }
 }
