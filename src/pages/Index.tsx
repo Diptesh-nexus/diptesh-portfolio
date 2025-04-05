@@ -3,12 +3,16 @@ import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Experience from '@/components/Experience';
 import Education from '@/components/Education';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppChat from '@/components/WhatsAppChat';
+
+// We're adding framer-motion for animations
+import { motion } from 'framer-motion';
 
 const Index = () => {
   useEffect(() => {
@@ -42,6 +46,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <About />
+      <Skills />
       <Projects />
       <Experience />
       <Education />
