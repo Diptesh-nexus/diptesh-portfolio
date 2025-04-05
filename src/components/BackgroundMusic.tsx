@@ -5,9 +5,21 @@ import { Music, MicOff } from 'lucide-react';
 const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const youtubeUrl = "https://youtu.be/gyMFujCaPYY?si=Z8xN63a74EHK5ST4";
+  // Convert YouTube URL to a direct audio stream URL
+  const audioUrl = youtubeUrl.replace('youtu.be/', 'youtube-nocookie.com/embed/').replace('?si=', '?autoplay=1&si=');
 
   useEffect(() => {
-    audioRef.current = new Audio('https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3');
+    // Create a hidden iframe element to play YouTube audio
+    const iframe = document.createElement('iframe');
+    iframe.id = 'youtube-audio-player';
+    iframe.style.display = 'none';
+    iframe.allow = 'autoplay';
+    
+    document.body.appendChild(iframe);
+    
+    // Setup audio fallback for mobile devices
+    audioRef.current = new Audio();
     audioRef.current.loop = true;
     audioRef.current.volume = 0.2;
 
@@ -16,20 +28,41 @@ const BackgroundMusic = () => {
         audioRef.current.pause();
         audioRef.current = null;
       }
+      
+      // Clean up iframe
+      const existingIframe = document.getElementById('youtube-audio-player');
+      if (existingIframe) {
+        document.body.removeChild(existingIframe);
+      }
     };
   }, []);
 
   const togglePlay = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
+    const iframe = document.getElementById('youtube-audio-player') as HTMLIFrameElement;
+    
+    if (isPlaying) {
+      // Pause YouTube audio
+      if (iframe) {
+        iframe.src = '';
+      }
+      // Also pause fallback audio
+      if (audioRef.current) {
         audioRef.current.pause();
-      } else {
+      }
+    } else {
+      // Play YouTube audio
+      if (iframe) {
+        iframe.src = audioUrl;
+      }
+      // Also try to play fallback audio for mobile
+      if (audioRef.current) {
         audioRef.current.play().catch(error => {
           console.error("Audio playback failed:", error);
         });
       }
-      setIsPlaying(!isPlaying);
     }
+    
+    setIsPlaying(!isPlaying);
   };
 
   return (
